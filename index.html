@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Baseline — Kate Dunn Drafting</title>
+<title>BuildWise — Victoria's Owner-Builder Pathway</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -46,357 +46,128 @@
     letter-spacing:-0.01em;
   }
 
-  .mono{
-    font-family:'IBM Plex Mono', monospace;
-    letter-spacing:0.02em;
-  }
-
+  .mono{font-family:'IBM Plex Mono', monospace; letter-spacing:0.02em;}
   a{color:inherit;}
-
   .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
-
-  :focus-visible{
-    outline:2px solid var(--rust);
-    outline-offset:3px;
-  }
+  :focus-visible{outline:2px solid var(--rust); outline-offset:3px;}
 
   /* ---------- Title block header ---------- */
-  header.titleblock{
-    border-bottom:1px solid var(--line-strong);
-    background:var(--paper-light);
-  }
-  .tb-top{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    padding:22px 0 18px;
-    gap:24px;
-    flex-wrap:wrap;
-  }
+  header.titleblock{border-bottom:1px solid var(--line-strong); background:var(--paper-light);}
+  .tb-top{display:flex; justify-content:space-between; align-items:flex-start; padding:22px 0 18px; gap:24px; flex-wrap:wrap;}
   .brand{display:flex; align-items:center; gap:12px;}
-  .brand-mark{
-    width:40px; height:40px;
-    border:1.5px solid var(--ink);
-    display:flex; align-items:center; justify-content:center;
-    font-family:'IBM Plex Mono', monospace;
-    font-weight:600;
-    font-size:15px;
-    flex-shrink:0;
-  }
+  .brand-mark{width:40px; height:40px; border:1.5px solid var(--ink); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono', monospace; font-weight:600; font-size:14px; flex-shrink:0;}
   .brand-text{display:flex; flex-direction:column;}
   .brand-name{font-family:'Fraunces', serif; font-weight:600; font-size:21px; letter-spacing:0.01em;}
   .brand-tag{font-size:11.5px; color:var(--muted); font-family:'IBM Plex Mono',monospace; letter-spacing:0.04em; text-transform:uppercase; margin-top:2px;}
 
-  .tb-fields{
-    display:grid;
-    grid-template-columns:repeat(4, auto);
-    border:1px solid var(--line-strong);
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-  }
-  .tb-field{
-    padding:6px 12px;
-    border-left:1px solid var(--line-strong);
-  }
+  .tb-fields{display:grid; grid-template-columns:repeat(4, auto); border:1px solid var(--line-strong); font-family:'IBM Plex Mono', monospace; font-size:11px;}
+  .tb-field{padding:6px 12px; border-left:1px solid var(--line-strong);}
   .tb-field:first-child{border-left:none;}
   .tb-field-label{color:var(--muted); display:block; font-size:9.5px; letter-spacing:0.06em; margin-bottom:2px;}
   .tb-field-value{display:block; color:var(--ink);}
 
-  nav.tb-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:10px 0;
-    border-top:1px solid var(--line);
-    flex-wrap:wrap;
-    gap:12px;
-  }
-  .navlinks{display:flex; gap:26px; flex-wrap:wrap;}
-  .navlinks a{
-    font-size:13.5px;
-    text-decoration:none;
-    color:var(--ink);
-    font-weight:500;
-    padding-bottom:3px;
-    border-bottom:1px solid transparent;
-    transition:border-color .15s ease;
-  }
+  nav.tb-nav{display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-top:1px solid var(--line); flex-wrap:wrap; gap:12px;}
+  .navlinks{display:flex; gap:22px; flex-wrap:wrap;}
+  .navlinks a{font-size:13px; text-decoration:none; color:var(--ink); font-weight:500; padding-bottom:3px; border-bottom:1px solid transparent; transition:border-color .15s ease;}
   .navlinks a:hover{border-bottom-color:var(--rust);}
 
-  .btn{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:10px 18px;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12.5px;
-    letter-spacing:0.03em;
-    text-transform:uppercase;
-    text-decoration:none;
-    border:1.5px solid var(--ink);
-    background:transparent;
-    color:var(--ink);
-    cursor:pointer;
-    border-radius:var(--radius);
-    transition:background .15s ease, color .15s ease;
-  }
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 18px; font-family:'IBM Plex Mono', monospace; font-size:12.5px; letter-spacing:0.03em; text-transform:uppercase; text-decoration:none; border:1.5px solid var(--ink); background:transparent; color:var(--ink); cursor:pointer; border-radius:var(--radius); transition:background .15s ease, color .15s ease;}
   .btn:hover{background:var(--ink); color:var(--paper-light);}
-  .btn-primary{
-    background:var(--rust);
-    border-color:var(--rust);
-    color:#fff;
-  }
+  .btn-primary{background:var(--rust); border-color:var(--rust); color:#fff;}
   .btn-primary:hover{background:#9A3C14; border-color:#9A3C14; color:#fff;}
   .btn-ghost{border-color:var(--line-strong); color:var(--muted);}
   .btn-ghost:hover{background:var(--ink); color:var(--paper-light);}
   .btn:disabled{opacity:.4; cursor:not-allowed;}
   .btn:disabled:hover{background:transparent; color:var(--ink);}
+  .btn-sm{padding:8px 14px; font-size:11px;}
 
   /* ---------- Section cut divider ---------- */
-  .cutline{
-    position:relative;
-    height:1px;
-    background:var(--line-strong);
-    margin:0;
-  }
-  .cutline::before, .cutline::after{
-    content:"";
-    position:absolute;
-    top:-4px;
-    width:9px; height:9px;
-    border-top:1.5px solid var(--ink);
-    border-right:1.5px solid var(--ink);
-    transform:rotate(45deg);
-  }
+  .cutline{position:relative; height:1px; background:var(--line-strong); margin:0;}
+  .cutline::before, .cutline::after{content:""; position:absolute; top:-4px; width:9px; height:9px; border-top:1.5px solid var(--ink); border-right:1.5px solid var(--ink); transform:rotate(45deg);}
   .cutline::before{left:calc(50% - 200px);}
   .cutline::after{left:calc(50% + 191px);}
 
-  section{padding:88px 0;}
-  .eyebrow{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--rust);
-    margin-bottom:14px;
-    display:flex; align-items:center; gap:10px;
-  }
+  section{padding:84px 0;}
+  .eyebrow{font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--rust); margin-bottom:14px; display:flex; align-items:center; gap:10px;}
   .eyebrow::before{content:""; width:22px; height:1px; background:var(--rust);}
 
   /* ---------- Hero ---------- */
-  .hero{padding-top:64px; padding-bottom:64px;}
-  .hero-grid{
-    display:grid;
-    grid-template-columns:1.05fr 0.95fr;
-    gap:56px;
-    align-items:center;
-  }
-  .hero h1{font-size:46px; max-width:11.5em;}
+  .hero{padding-top:60px; padding-bottom:60px;}
+  .hero-grid{display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;}
+  .hero h1{font-size:42px; max-width:12em;}
   .hero h1 em{font-style:normal; color:var(--rust);}
-  .hero p.lede{
-    font-size:17.5px;
-    color:#3B4239;
-    max-width:38em;
-    margin-top:20px;
-  }
-  .hero-cta{display:flex; gap:14px; margin-top:32px; flex-wrap:wrap;}
+  .hero p.lede{font-size:17px; color:#3B4239; max-width:40em; margin-top:20px;}
+  .hero-cta{display:flex; gap:14px; margin-top:30px; flex-wrap:wrap;}
+  .disclaimer-line{font-size:11.5px; color:var(--muted); margin-top:22px; font-family:'IBM Plex Mono', monospace; max-width:38em; line-height:1.6;}
 
-  .drawing-box{
-    border:1px solid var(--line-strong);
-    background:var(--paper-light);
-    padding:18px;
-    position:relative;
-  }
+  .drawing-box{border:1px solid var(--line-strong); background:var(--paper-light); padding:18px; position:relative;}
   .drawing-box svg{width:100%; height:auto; display:block;}
-  .draw-anim path, .draw-anim line, .draw-anim rect, .draw-anim polyline{
-    stroke-dasharray:1400;
-    stroke-dashoffset:1400;
-    animation:draw 2.4s ease forwards;
-  }
+  .draw-anim path, .draw-anim line, .draw-anim rect, .draw-anim polyline{stroke-dasharray:1400; stroke-dashoffset:1400; animation:draw 2.4s ease forwards;}
   @keyframes draw{to{stroke-dashoffset:0;}}
-  .drawing-caption{
-    display:flex; justify-content:space-between;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:10.5px;
-    color:var(--muted);
-    margin-top:10px;
-    letter-spacing:0.03em;
-  }
+  .drawing-caption{display:flex; justify-content:space-between; font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--muted); margin-top:10px; letter-spacing:0.03em;}
 
   /* ---------- Process ---------- */
-  .process-list{
-    display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap:0;
-    margin-top:48px;
-    border-top:1px solid var(--line-strong);
-  }
-  .process-item{
-    padding:24px 20px 0;
-    border-left:1px solid var(--line);
-    position:relative;
-  }
-  .process-item:first-child{border-left:none;}
-  .process-sheet{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11.5px;
-    color:var(--rust);
-    margin-bottom:14px;
-  }
-  .process-item h3{font-size:19px; margin-bottom:10px;}
-  .process-item p{font-size:14px; color:var(--muted); margin:0;}
+  .process-list{display:grid; grid-template-columns:repeat(3, 1fr); gap:0; margin-top:44px; border-top:1px solid var(--line-strong);}
+  .process-item{padding:22px 20px 0; border-left:1px solid var(--line);}
+  .process-item:nth-child(3n+1){border-left:none;}
+  .process-item:nth-child(n+4){border-top:1px solid var(--line); padding-top:22px; margin-top:22px;}
+  .process-sheet{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--rust); margin-bottom:12px;}
+  .process-item h3{font-size:17.5px; margin-bottom:9px;}
+  .process-item p{font-size:13.5px; color:var(--muted); margin:0;}
 
   /* ---------- Tiers ---------- */
-  .tier-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:20px;
-    margin-top:44px;
-  }
-  .tier-card{
-    border:1.5px solid var(--line-strong);
-    background:var(--paper-light);
-    padding:28px 24px;
-    cursor:pointer;
-    transition:border-color .15s ease, box-shadow .15s ease;
-    display:flex;
-    flex-direction:column;
-  }
+  .tier-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; margin-top:44px;}
+  .tier-card{border:1.5px solid var(--line-strong); background:var(--paper-light); padding:28px 24px; cursor:pointer; transition:border-color .15s ease, box-shadow .15s ease; display:flex; flex-direction:column;}
   .tier-card:hover{border-color:var(--ink);}
-  .tier-card.selected{
-    border-color:var(--rust);
-    box-shadow:0 0 0 1px var(--rust);
-  }
+  .tier-card.selected{border-color:var(--rust); box-shadow:0 0 0 1px var(--rust);}
   .tier-name{font-family:'Fraunces', serif; font-size:22px; font-weight:600;}
   .tier-price{font-family:'IBM Plex Mono', monospace; font-size:14px; color:var(--rust); margin-top:8px;}
+  .tier-note{font-size:11.5px; color:var(--muted); margin-top:4px; font-family:'IBM Plex Mono', monospace;}
   .tier-desc{font-size:14px; color:var(--muted); margin-top:14px;}
   .tier-feats{list-style:none; padding:0; margin:18px 0 0; font-size:13.5px; flex-grow:1;}
   .tier-feats li{padding:7px 0; border-top:1px solid var(--line); display:flex; gap:8px;}
   .tier-feats li::before{content:"—"; color:var(--brass); flex-shrink:0;}
-  .tier-pick{
-    margin-top:20px;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11.5px;
-    text-transform:uppercase;
-    letter-spacing:0.04em;
-    color:var(--muted);
-  }
+  .tier-pick{margin-top:20px; font-family:'IBM Plex Mono', monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:0.04em; color:var(--muted);}
   .tier-card.selected .tier-pick{color:var(--rust); font-weight:600;}
 
-  .tier-summary{
-    margin-top:28px;
-    padding:16px 20px;
-    border:1px dashed var(--line-strong);
-    font-family:'IBM Plex Mono', monospace;
-    font-size:13px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:10px;
-  }
+  .tier-summary{margin-top:28px; padding:16px 20px; border:1px dashed var(--line-strong); font-family:'IBM Plex Mono', monospace; font-size:13px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;}
   .tier-summary span.label{color:var(--muted);}
 
-  /* ---------- Templates ---------- */
+  /* ---------- Filter + grids (templates & add-ons) ---------- */
   .filter-row{display:flex; gap:10px; margin:36px 0 30px; flex-wrap:wrap;}
-  .filter-btn{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    letter-spacing:0.03em;
-    padding:8px 14px;
-    border:1px solid var(--line-strong);
-    background:transparent;
-    color:var(--muted);
-    cursor:pointer;
-    text-transform:uppercase;
-    border-radius:var(--radius);
-  }
+  .filter-btn{font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.03em; padding:8px 14px; border:1px solid var(--line-strong); background:transparent; color:var(--muted); cursor:pointer; text-transform:uppercase; border-radius:var(--radius);}
   .filter-btn.active{background:var(--ink); border-color:var(--ink); color:var(--paper-light);}
 
-  .template-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:18px;
-  }
-  .template-card{
-    border:1px solid var(--line-strong);
-    background:var(--paper-light);
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-  }
-  .template-thumb{
-    background:var(--paper);
-    padding:18px;
-    border-bottom:1px solid var(--line);
-  }
-  .template-thumb svg{width:100%; height:110px; display:block;}
-  .template-body{padding:16px 18px 18px;}
-  .template-tag{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:10px;
-    text-transform:uppercase;
-    letter-spacing:0.05em;
-    color:var(--brass);
-  }
-  .template-name{font-family:'Fraunces', serif; font-weight:600; font-size:17px; margin-top:6px;}
-  .template-price{font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--rust); margin-top:8px;}
+  .card-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:18px;}
+  .item-card{border:1px solid var(--line-strong); background:var(--paper-light); overflow:hidden; display:flex; flex-direction:column;}
+  .item-thumb{background:var(--paper); padding:18px; border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:center;}
+  .item-thumb svg{width:100%; height:90px; display:block;}
+  .item-body{padding:16px 18px 18px;}
+  .item-tag{font-family:'IBM Plex Mono', monospace; font-size:10px; text-transform:uppercase; letter-spacing:0.05em; color:var(--brass);}
+  .item-name{font-family:'Fraunces', serif; font-weight:600; font-size:16.5px; margin-top:6px;}
+  .item-meta{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--rust); margin-top:8px;}
+  .item-desc{font-size:13px; color:var(--muted); margin-top:8px; line-height:1.5;}
+  .item-cta{margin-top:14px;}
 
   /* ---------- Intake form ---------- */
-  .form-panel{
-    border:1px solid var(--line-strong);
-    background:var(--paper-light);
-    margin-top:44px;
-    padding:40px;
-  }
-  .steps-track{
-    display:flex;
-    align-items:center;
-    margin-bottom:40px;
-  }
-  .step-dot{
-    width:28px; height:28px;
-    border:1.5px solid var(--line-strong);
-    border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    color:var(--muted);
-    background:var(--paper-light);
-    flex-shrink:0;
-  }
+  .form-panel{border:1px solid var(--line-strong); background:var(--paper-light); margin-top:44px; padding:40px;}
+  .steps-track{display:flex; align-items:center; margin-bottom:40px;}
+  .step-dot{width:28px; height:28px; border:1.5px solid var(--line-strong); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--muted); background:var(--paper-light); flex-shrink:0;}
   .step-dot.active{border-color:var(--rust); color:var(--rust); font-weight:600;}
   .step-dot.done{background:var(--ink); border-color:var(--ink); color:var(--paper-light);}
-  .step-connector{flex-grow:1; height:1px; background:var(--line-strong); margin:0 6px; position:relative;}
+  .step-connector{flex-grow:1; height:1px; background:var(--line-strong); margin:0 6px;}
   .step-connector.done{background:var(--ink);}
-  .step-label{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:10px;
-    text-transform:uppercase;
-    color:var(--muted);
-    position:absolute;
-    top:36px;
-    left:50%;
-    transform:translateX(-50%);
-    white-space:nowrap;
-  }
+  .step-label{font-family:'IBM Plex Mono', monospace; font-size:10px; text-transform:uppercase; color:var(--muted); position:absolute; top:36px; left:50%; transform:translateX(-50%); white-space:nowrap;}
   .step-dot-wrap{position:relative;}
 
   .form-step{display:none;}
   .form-step.active{display:block; animation:fadeIn .25s ease;}
   @keyframes fadeIn{from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);}}
-
-  .form-step h3{font-size:24px; margin-bottom:6px;}
-  .form-step .step-sub{color:var(--muted); font-size:14px; margin-bottom:28px;}
+  .form-step h3{font-size:23px; margin-bottom:6px;}
+  .form-step .step-sub{color:var(--muted); font-size:14px; margin-bottom:26px;}
 
   .option-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:12px;}
-  .option-card{
-    border:1px solid var(--line-strong);
-    padding:16px 18px;
-    cursor:pointer;
-    font-size:14px;
-    transition:border-color .15s ease;
-  }
+  .option-card{border:1px solid var(--line-strong); padding:16px 18px; cursor:pointer; font-size:14px; transition:border-color .15s ease;}
   .option-card:hover{border-color:var(--ink);}
   .option-card.picked{border-color:var(--rust); background:#F3E6DC;}
   .option-card .oc-name{font-weight:600;}
@@ -405,111 +176,57 @@
   .field-row{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px;}
   .field{display:flex; flex-direction:column; gap:6px;}
   .field.full{grid-column:1/-1;}
-  .field label{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:0.03em;
-    color:var(--muted);
-  }
-  .field input, .field select{
-    font-family:'Public Sans', sans-serif;
-    font-size:14.5px;
-    padding:10px 12px;
-    border:1px solid var(--line-strong);
-    background:var(--paper);
-    color:var(--ink);
-    border-radius:var(--radius);
-  }
+  .field label{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.03em; color:var(--muted);}
+  .field input, .field select{font-family:'Public Sans', sans-serif; font-size:14.5px; padding:10px 12px; border:1px solid var(--line-strong); background:var(--paper); color:var(--ink); border-radius:var(--radius);}
   .field input:focus, .field select:focus{border-color:var(--rust);}
 
   .form-nav{display:flex; justify-content:space-between; margin-top:34px; padding-top:24px; border-top:1px solid var(--line);}
 
   .summary-block{border:1px solid var(--line-strong); padding:20px 22px; font-size:14px; margin-bottom:10px;}
-  .summary-row{display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid var(--line);}
+  .summary-row{display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid var(--line); gap:16px;}
   .summary-row:last-child{border-bottom:none;}
-  .summary-row span:first-child{color:var(--muted); font-family:'IBM Plex Mono',monospace; font-size:12px; text-transform:uppercase;}
+  .summary-row span:first-child{color:var(--muted); font-family:'IBM Plex Mono',monospace; font-size:12px; text-transform:uppercase; flex-shrink:0;}
+  .summary-row span:last-child{text-align:right;}
 
-  .confirm-box{
-    text-align:center;
-    padding:50px 20px;
-  }
-  .confirm-mark{
-    width:52px; height:52px;
-    border:1.5px solid var(--rust);
-    border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    margin:0 auto 20px;
-    font-family:'IBM Plex Mono', monospace;
-    color:var(--rust);
-    font-size:20px;
-  }
+  .confirm-box{text-align:center; padding:50px 20px;}
+  .confirm-mark{width:52px; height:52px; border:1.5px solid var(--rust); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px; font-family:'IBM Plex Mono', monospace; color:var(--rust); font-size:20px;}
 
-  /* ---------- Dashboard preview ---------- */
-  .dash-shell{
-    border:1px solid var(--line-strong);
-    background:var(--paper-light);
-    margin-top:44px;
-  }
-  .dash-header{
-    display:flex; justify-content:space-between; align-items:center;
-    padding:16px 24px;
-    border-bottom:1px solid var(--line-strong);
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    color:var(--muted);
-  }
+  /* ---------- Member portal ---------- */
+  .dash-shell{border:1px solid var(--line-strong); background:var(--paper-light); margin-top:44px;}
+  .dash-header{display:flex; justify-content:space-between; align-items:center; padding:16px 24px; border-bottom:1px solid var(--line-strong); font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--muted); flex-wrap:wrap; gap:8px;}
   .dash-body{padding:30px 24px; display:grid; grid-template-columns:1fr 1fr; gap:30px;}
   .tracker{list-style:none; margin:0; padding:0;}
-  .tracker li{
-    display:flex; gap:14px; padding:14px 0; border-top:1px solid var(--line);
-  }
+  .tracker li{display:flex; gap:14px; padding:13px 0; border-top:1px solid var(--line);}
   .tracker li:first-child{border-top:none;}
-  .tstatus{
-    width:20px; height:20px; border-radius:50%; flex-shrink:0; margin-top:2px;
-    border:1.5px solid var(--line-strong);
-  }
+  .tstatus{width:20px; height:20px; border-radius:50%; flex-shrink:0; margin-top:2px; border:1.5px solid var(--line-strong);}
   .tstatus.done{background:var(--ink); border-color:var(--ink);}
   .tstatus.current{border-color:var(--rust); box-shadow:0 0 0 3px #F3E6DC;}
-  .tname{font-weight:600; font-size:14.5px;}
-  .tdate{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--muted); margin-top:2px;}
+  .tname{font-weight:600; font-size:14px;}
+  .tdate{font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--muted); margin-top:2px;}
 
-  .thread{border:1px solid var(--line); padding:16px; font-size:13px;}
+  .panel-title{font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; color:var(--muted); margin-bottom:12px; letter-spacing:0.04em;}
+  .thread{border:1px solid var(--line); padding:16px; font-size:13px; margin-bottom:16px;}
   .msg{margin-bottom:14px;}
   .msg:last-child{margin-bottom:0;}
   .msg-from{font-family:'IBM Plex Mono', monospace; font-size:10.5px; color:var(--brass); text-transform:uppercase; margin-bottom:3px;}
   .msg-body{color:#3B4239;}
+  .qa-banner{border:1px dashed var(--line-strong); padding:14px 16px; font-size:13px; display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;}
+  .qa-banner strong{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--rust);}
 
-  /* ---------- Footer titleblock ---------- */
-  footer{
-    border-top:1px solid var(--line-strong);
-    background:var(--paper-light);
-    padding:26px 0;
-    margin-top:40px;
-  }
-  .foot-grid{
-    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    color:var(--muted);
-  }
-  .proto-note{
-    text-align:center;
-    padding:14px 0;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    color:var(--muted);
-    background:var(--paper);
-    border-top:1px dashed var(--line-strong);
-  }
+  /* ---------- Footer ---------- */
+  footer{border-top:1px solid var(--line-strong); background:var(--paper-light); padding:26px 0;}
+  .foot-grid{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--muted);}
+  .proto-note{text-align:center; padding:12px 0; font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--muted); background:var(--paper); border-top:1px dashed var(--line-strong);}
+  .legal-note{text-align:center; padding:14px 20px; font-size:11.5px; color:var(--muted); background:var(--paper-light); border-top:1px solid var(--line); max-width:56em; margin:0 auto; line-height:1.6;}
 
   @media (max-width: 880px){
     .hero-grid{grid-template-columns:1fr;}
-    .hero h1{font-size:34px;}
+    .hero h1{font-size:32px;}
     .process-list{grid-template-columns:1fr 1fr;}
-    .process-item{border-left:none; border-top:1px solid var(--line); padding-top:20px;}
+    .process-item{border-left:none !important; border-top:1px solid var(--line); padding-top:20px; margin-top:20px !important;}
+    .process-item:first-child{border-top:none; margin-top:0 !important;}
     .tier-grid{grid-template-columns:1fr;}
-    .template-grid{grid-template-columns:1fr 1fr;}
+    .card-grid{grid-template-columns:1fr 1fr;}
     .dash-body{grid-template-columns:1fr;}
     .field-row{grid-template-columns:1fr;}
     .tb-fields{grid-template-columns:repeat(2,auto);}
@@ -517,7 +234,7 @@
     .form-panel{padding:26px 20px;}
   }
   @media (max-width:560px){
-    .template-grid{grid-template-columns:1fr;}
+    .card-grid{grid-template-columns:1fr;}
   }
 </style>
 </head>
@@ -527,28 +244,29 @@
   <div class="wrap">
     <div class="tb-top">
       <div class="brand">
-        <div class="brand-mark">B.</div>
+        <div class="brand-mark">BW</div>
         <div class="brand-text">
-          <div class="brand-name">Baseline</div>
-          <div class="brand-tag">Drafting &amp; planning by Kate Dunn</div>
+          <div class="brand-name">BuildWise</div>
+          <div class="brand-tag">The owner-builder pathway &middot; Kate Dunn</div>
         </div>
       </div>
       <div class="tb-fields">
-        <div class="tb-field"><span class="tb-field-label">Project</span><span class="tb-field-value">Concept Prototype</span></div>
-        <div class="tb-field"><span class="tb-field-label">Scale</span><span class="tb-field-value">NTS</span></div>
+        <div class="tb-field"><span class="tb-field-label">Project</span><span class="tb-field-value">Owner-Builder Pathway</span></div>
+        <div class="tb-field"><span class="tb-field-label">Region</span><span class="tb-field-value">VIC</span></div>
         <div class="tb-field"><span class="tb-field-label">Sheet</span><span class="tb-field-value">A&#8209;0.00</span></div>
-        <div class="tb-field"><span class="tb-field-label">Date</span><span class="tb-field-value">2026</span></div>
+        <div class="tb-field"><span class="tb-field-label">Rev</span><span class="tb-field-value">02</span></div>
       </div>
     </div>
     <nav class="tb-nav">
       <div class="navlinks">
-        <a href="#process">How it works</a>
-        <a href="#tiers">Packages</a>
-        <a href="#templates">Plan templates</a>
-        <a href="#start">Start a project</a>
-        <a href="#dashboard">Client tracker</a>
+        <a href="#process">The pathway</a>
+        <a href="#tiers">Tiers</a>
+        <a href="#templates">Templates &amp; tools</a>
+        <a href="#addons">Book Kate</a>
+        <a href="#start">Start your pathway</a>
+        <a href="#portal">Member portal</a>
       </div>
-      <a href="#start" class="btn btn-primary">Start a project</a>
+      <a href="#start" class="btn btn-primary">Start your pathway</a>
     </nav>
   </div>
 </header>
@@ -556,24 +274,23 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">Thirty years of drafting, made reachable</div>
-      <h1>Every good build starts from a <em>baseline</em>.</h1>
-      <p class="lede">Baseline takes Kate Dunn's thirty years drafting for architecture firms across the US and Australia and turns it into a service you can actually afford — proven plan templates, a clear staged process, and Kate's direct review at the points that matter most.</p>
+      <div class="eyebrow">Victoria-specific &middot; 30 years design &amp; PM experience</div>
+      <h1>Building costs less to plan than it does to <em>get wrong</em>.</h1>
+      <p class="lede">BuildWise turns Kate Dunn's thirty years of architectural design and project management into a staged course, template library and community built specifically around the Victorian owner-builder process — with Kate's direct, paid expertise there at the moments of highest risk, not bundled into every dollar you spend.</p>
       <div class="hero-cta">
-        <a href="#process" class="btn">See how it works</a>
-        <a href="#templates" class="btn btn-ghost">Browse plan templates</a>
+        <a href="#process" class="btn">See the pathway</a>
+        <a href="#tiers" class="btn btn-ghost">Compare tiers</a>
       </div>
+      <p class="disclaimer-line">General educational information — not site-specific professional advice, and it doesn't replace a registered building surveyor or the statutory BPC process.</p>
     </div>
     <div class="drawing-box">
       <svg viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="draw-anim">
-        <!-- floor plan outline -->
         <rect x="60" y="40" width="260" height="200" stroke="#20261F" stroke-width="2"/>
         <line x1="180" y1="40" x2="180" y2="150" stroke="#20261F" stroke-width="1.4"/>
         <line x1="180" y1="150" x2="320" y2="150" stroke="#20261F" stroke-width="1.4"/>
-        <!-- door swings -->
         <path d="M180 150 A 40 40 0 0 1 220 190" stroke="#2B4C6F" stroke-width="1.2"/>
         <path d="M60 190 A 30 30 0 0 0 90 220" stroke="#2B4C6F" stroke-width="1.2"/>
-        <!-- dimension lines -->
+        <!-- setback / dimension lines -->
         <line x1="60" y1="256" x2="320" y2="256" stroke="#A9822F" stroke-width="1"/>
         <line x1="60" y1="250" x2="60" y2="262" stroke="#A9822F" stroke-width="1"/>
         <line x1="320" y1="250" x2="320" y2="262" stroke="#A9822F" stroke-width="1"/>
@@ -588,9 +305,15 @@
         <line x1="60" y1="285" x2="60" y2="295" stroke="#20261F" stroke-width="1.4"/>
         <line x1="100" y1="285" x2="100" y2="295" stroke="#20261F" stroke-width="1.4"/>
         <line x1="140" y1="285" x2="140" y2="295" stroke="#20261F" stroke-width="1.4"/>
+        <!-- Certificate of Consent stamp -->
+        <g transform="translate(368,265) rotate(-11)">
+          <circle r="24" stroke="#B84A1C" stroke-width="1.3" stroke-dasharray="3 2" fill="none"/>
+          <text x="0" y="-3" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="6.4" fill="#B84A1C">CERT. OF</text>
+          <text x="0" y="6" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="6.4" fill="#B84A1C">CONSENT</text>
+        </g>
       </svg>
       <div class="drawing-caption">
-        <span>DWG · site &amp; floor concept</span>
+        <span>DWG &middot; site &amp; setback concept</span>
         <span>1:100 @ A3</span>
       </div>
     </div>
@@ -601,28 +324,38 @@
 
 <section id="process">
   <div class="wrap">
-    <div class="eyebrow">The process</div>
-    <h2 style="font-size:34px; max-width:14em;">Four fixed stages. You always know which one you're on.</h2>
+    <div class="eyebrow">The pathway</div>
+    <h2 style="font-size:32px; max-width:15em;">Six fixed stages, from title check to occupancy. You always know which one you're on.</h2>
     <div class="process-list">
       <div class="process-item">
         <div class="process-sheet mono">A&#8209;1.01</div>
-        <h3>Site assessment</h3>
-        <p>Kate or a trained associate reviews your block, brief and budget against a set intake questionnaire — no open-ended meetings required to get started.</p>
+        <h3>Site &amp; title checks</h3>
+        <p>Confirm title, easements and existing conditions before you commit to a design brief.</p>
       </div>
       <div class="process-item">
         <div class="process-sheet mono">A&#8209;1.02</div>
-        <h3>Concept</h3>
-        <p>You start from a proven template matched to your project type, adapted to your site. Fewer decisions from a blank page, same design judgement behind it.</p>
+        <h3>Zoning, overlays &amp; planning permit</h3>
+        <p>Work out what your block actually allows, and lodge for a planning permit where one's required.</p>
       </div>
       <div class="process-item">
         <div class="process-sheet mono">A&#8209;1.03</div>
-        <h3>Feasibility</h3>
-        <p>A fixed-scope review checks council, budget and buildability constraints before you spend on working drawings.</p>
+        <h3>BPC Certificate of Consent</h3>
+        <p>Complete the owner-builder learning module and secure your Certificate of Consent before construction can begin.</p>
       </div>
       <div class="process-item">
         <div class="process-sheet mono">A&#8209;1.04</div>
-        <h3>Working plans</h3>
-        <p>Final documentation is prepared at the level your package includes — from lodgement-ready plans to Kate's full bespoke set.</p>
+        <h3>Design, documentation &amp; surveyor</h3>
+        <p>Finalise your design brief and documentation, and engage a registered building surveyor.</p>
+      </div>
+      <div class="process-item">
+        <div class="process-sheet mono">A&#8209;1.05</div>
+        <h3>Staged construction &amp; inspections</h3>
+        <p>Move through each stage against a Victorian-timeline milestone schedule, with inspections booked at the right points.</p>
+      </div>
+      <div class="process-item">
+        <div class="process-sheet mono">A&#8209;1.06</div>
+        <h3>Occupancy &amp; sign-off</h3>
+        <p>Close out final inspections and secure your occupancy permit — the finish line.</p>
       </div>
     </div>
   </div>
@@ -632,54 +365,58 @@
 
 <section id="tiers">
   <div class="wrap">
-    <div class="eyebrow">Packages</div>
-    <h2 style="font-size:34px; max-width:14em;">Three ways to work with Kate.</h2>
+    <div class="eyebrow">Choose your tier</div>
+    <h2 style="font-size:32px; max-width:14em;">Self-serve, guided, or backed by Kate directly.</h2>
     <div class="tier-grid" id="tierGrid">
 
-      <div class="tier-card" data-tier="Baseline" data-price="from $450" data-detail="template-led · self-guided · one written review">
-        <div class="tier-name">Baseline</div>
-        <div class="tier-price mono">from $450</div>
-        <div class="tier-desc">Pick a matched template, adapt it yourself with guided prompts, and get one written review from Kate's team before you lodge.</div>
+      <div class="tier-card" data-tier="Foundations" data-price="$247 one-off" data-detail="full digital guide, checklists, templates &amp; self-paced course">
+        <div class="tier-name">Foundations</div>
+        <div class="tier-price mono">$247 one-off</div>
+        <div class="tier-desc">The full digital guide across all six pathway stages, permit and siting checklists, contract templates and the self-paced core video course.</div>
         <ul class="tier-feats">
-          <li>Template-matched to your project type</li>
-          <li>Self-guided adaptation tools</li>
-          <li>One written review round</li>
-          <li>Email support</li>
+          <li>Full digital guide, all 6 stages</li>
+          <li>Permit &amp; siting checklists</li>
+          <li>Contract / scope-of-works templates</li>
+          <li>Self-paced core video course</li>
+          <li>12 months' community access (read &amp; post)</li>
         </ul>
-        <div class="tier-pick mono">Select Baseline</div>
+        <div class="tier-pick mono">Select Foundations</div>
       </div>
 
-      <div class="tier-card selected" data-tier="Guided" data-price="from $1,200" data-detail="template + two live sessions with Kate's team">
-        <div class="tier-name">Guided</div>
-        <div class="tier-price mono">from $1,200</div>
-        <div class="tier-desc">Everything in Baseline, plus two scheduled sessions with a member of Kate's team to work through concept and feasibility together.</div>
+      <div class="tier-card selected" data-tier="Builder" data-price="$497 one-off" data-detail="everything in Foundations, plus case-study course &amp; live monthly Q&amp;A">
+        <div class="tier-name">Builder</div>
+        <div class="tier-price mono">$497 one-off</div>
+        <div class="tier-note">optional $29/mo membership after 12 months</div>
+        <div class="tier-desc">Everything in Foundations, plus the extended phase-by-phase course with case studies and a milestone schedule aligned to Victorian approval timelines.</div>
         <ul class="tier-feats">
-          <li>Everything in Baseline</li>
-          <li>Two 45&#8209;minute working sessions</li>
-          <li>Feasibility review included</li>
-          <li>Priority turnaround</li>
+          <li>Everything in Foundations</li>
+          <li>Extended course with case studies</li>
+          <li>VIC-timeline milestone schedule template</li>
+          <li>Monthly live group Q&amp;A</li>
+          <li>Moderator-supported community</li>
         </ul>
         <div class="tier-pick mono">Selected</div>
       </div>
 
-      <div class="tier-card" data-tier="Bespoke" data-price="from $4,500" data-detail="fully custom · direct with Kate">
-        <div class="tier-name">Bespoke</div>
-        <div class="tier-price mono">from $4,500</div>
-        <div class="tier-desc">Kate's original service — a fully custom design and documentation process, worked directly with her from first sketch to final set.</div>
+      <div class="tier-card" data-tier="Concierge" data-price="$1,490–$1,990 one-off" data-detail="everything in Builder, plus two 1:1 sessions with Kate">
+        <div class="tier-name">Concierge</div>
+        <div class="tier-price mono">$1,490–$1,990</div>
+        <div class="tier-note">one-off</div>
+        <div class="tier-desc">Everything in Builder, plus direct 1:1 time with Kate at the two highest-risk moments — siting/design and pre-construction.</div>
         <ul class="tier-feats">
-          <li>No template starting point</li>
-          <li>Direct 1:1 with Kate throughout</li>
-          <li>Unlimited revision rounds</li>
-          <li>Full custom documentation set</li>
+          <li>Everything in Builder</li>
+          <li>Two 60-min 1:1 sessions with Kate</li>
+          <li>One permit documentation review round</li>
+          <li>Discounted rate on further consulting</li>
         </ul>
-        <div class="tier-pick mono">Select Bespoke</div>
+        <div class="tier-pick mono">Select Concierge</div>
       </div>
 
     </div>
 
     <div class="tier-summary">
-      <div><span class="label mono">SELECTED —</span> <span id="tierSummaryText" class="mono">Guided · from $1,200 · template + two live sessions with Kate's team</span></div>
-      <a href="#start" class="btn btn-primary">Start with this package</a>
+      <div><span class="label mono">SELECTED —</span> <span id="tierSummaryText" class="mono">Builder · $497 one-off · everything in Foundations, plus case-study course &amp; live monthly Q&amp;A</span></div>
+      <a href="#start" class="btn btn-primary">Start with this tier</a>
     </div>
   </div>
 </section>
@@ -688,18 +425,27 @@
 
 <section id="templates">
   <div class="wrap">
-    <div class="eyebrow">Plan templates</div>
-    <h2 style="font-size:34px; max-width:14em;">Start from a plan that's already been built, not a blank page.</h2>
+    <div class="eyebrow">Templates &amp; tools</div>
+    <h2 style="font-size:32px; max-width:15em;">Checklists and templates matched to each stage, not a blank page.</h2>
 
     <div class="filter-row" id="filterRow">
       <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="Extension">Extension</button>
-      <button class="filter-btn" data-filter="New build">New build</button>
-      <button class="filter-btn" data-filter="Granny flat">Granny flat</button>
-      <button class="filter-btn" data-filter="Renovation">Renovation</button>
+      <button class="filter-btn" data-filter="Site & Permits">Site &amp; Permits</button>
+      <button class="filter-btn" data-filter="Design & Contracts">Design &amp; Contracts</button>
+      <button class="filter-btn" data-filter="Construction & Inspections">Construction &amp; Inspections</button>
     </div>
 
-    <div class="template-grid" id="templateGrid"></div>
+    <div class="card-grid" id="templateGrid"></div>
+  </div>
+</section>
+
+<div class="cutline"></div>
+
+<section id="addons">
+  <div class="wrap">
+    <div class="eyebrow">Book Kate directly</div>
+    <h2 style="font-size:32px; max-width:15em;">A la carte time with Kate, for the moments that matter most.</h2>
+    <div class="card-grid" id="addonGrid"></div>
   </div>
 </section>
 
@@ -707,8 +453,8 @@
 
 <section id="start">
   <div class="wrap">
-    <div class="eyebrow">Start a project</div>
-    <h2 style="font-size:34px; max-width:14em;">Tell Kate's team about your site. Takes about four minutes.</h2>
+    <div class="eyebrow">Start your pathway</div>
+    <h2 style="font-size:32px; max-width:15em;">Tell us about your project. Takes about four minutes.</h2>
 
     <div class="form-panel">
       <div class="steps-track">
@@ -724,12 +470,12 @@
       <!-- STEP 1 -->
       <div class="form-step active" data-step="1">
         <h3>What are you planning?</h3>
-        <p class="step-sub">This decides which templates and reviewers we match you with.</p>
+        <p class="step-sub">This decides which templates, checklists and course modules we lead with.</p>
         <div class="option-grid" id="projectTypeGrid">
-          <div class="option-card" data-value="Extension"><div class="oc-name">Extension</div><div class="oc-desc">Adding rooms or a second storey to an existing home</div></div>
-          <div class="option-card" data-value="New build"><div class="oc-name">New build</div><div class="oc-desc">A new home on a vacant or cleared block</div></div>
-          <div class="option-card" data-value="Granny flat"><div class="oc-name">Granny flat</div><div class="oc-desc">A secondary dwelling on an existing block</div></div>
-          <div class="option-card" data-value="Renovation"><div class="oc-name">Renovation</div><div class="oc-desc">Reworking layout within the existing footprint</div></div>
+          <div class="option-card" data-value="Renovation / Extension"><div class="oc-name">Renovation / Extension</div><div class="oc-desc">Adding a second storey, extension or major renovation to an existing property</div></div>
+          <div class="option-card" data-value="Knockdown-Rebuild"><div class="oc-name">Knockdown-Rebuild</div><div class="oc-desc">Demolishing and rebuilding on your existing block</div></div>
+          <div class="option-card" data-value="Secondary Dwelling / Granny Flat"><div class="oc-name">Secondary Dwelling / Granny Flat</div><div class="oc-desc">A self-contained secondary dwelling on your block</div></div>
+          <div class="option-card" data-value="Regional Self-Build"><div class="oc-name">Regional Self-Build</div><div class="oc-desc">A rural or peri-urban block outside metro Melbourne</div></div>
         </div>
       </div>
 
@@ -739,20 +485,29 @@
         <p class="step-sub">Rough figures are fine at this stage.</p>
         <div class="field-row">
           <div class="field full">
-            <label for="addr">Site address or suburb</label>
-            <input type="text" id="addr" placeholder="e.g. Northcote, VIC">
+            <label for="addr">Suburb or postcode</label>
+            <input type="text" id="addr" placeholder="e.g. Northcote, VIC 3070">
           </div>
           <div class="field">
             <label for="lot">Approx. lot size</label>
             <input type="text" id="lot" placeholder="e.g. 450 m&sup2;">
           </div>
           <div class="field">
-            <label for="budget">Approx. budget range</label>
+            <label for="budget">Approx. build budget</label>
             <select id="budget">
-              <option>Under $150k</option>
-              <option selected>$150k – $400k</option>
-              <option>$400k – $800k</option>
-              <option>$800k+</option>
+              <option>Under $300k</option>
+              <option selected>$300k – $600k</option>
+              <option>$600k – $1M</option>
+              <option>$1M+</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="surveyor">Engaged a building surveyor yet?</label>
+            <select id="surveyor">
+              <option>Not yet</option>
+              <option>In progress</option>
+              <option>Yes, already engaged</option>
+              <option>Not sure what this means</option>
             </select>
           </div>
         </div>
@@ -760,8 +515,8 @@
 
       <!-- STEP 3 -->
       <div class="form-step" data-step="3">
-        <h3>How should Kate's team reach you?</h3>
-        <p class="step-sub">Used only to send your baseline review — nothing else.</p>
+        <h3>How should we reach you?</h3>
+        <p class="step-sub">Used only to set up your account and send your first module.</p>
         <div class="field-row">
           <div class="field">
             <label for="name">Full name</label>
@@ -780,13 +535,14 @@
 
       <!-- STEP 4 -->
       <div class="form-step" data-step="4">
-        <h3>Review your baseline</h3>
-        <p class="step-sub">Nothing is sent until you confirm.</p>
+        <h3>Review before you start</h3>
+        <p class="step-sub">Nothing is charged until you confirm.</p>
         <div class="summary-block">
-          <div class="summary-row"><span>Package</span><span id="revTier">—</span></div>
+          <div class="summary-row"><span>Tier</span><span id="revTier">—</span></div>
           <div class="summary-row"><span>Project type</span><span id="revType">—</span></div>
           <div class="summary-row"><span>Site</span><span id="revSite">—</span></div>
-          <div class="summary-row"><span>Budget range</span><span id="revBudget">—</span></div>
+          <div class="summary-row"><span>Budget</span><span id="revBudget">—</span></div>
+          <div class="summary-row"><span>Surveyor status</span><span id="revSurveyor">—</span></div>
           <div class="summary-row"><span>Contact</span><span id="revContact">—</span></div>
         </div>
       </div>
@@ -795,8 +551,8 @@
       <div class="form-step" data-step="5">
         <div class="confirm-box">
           <div class="confirm-mark mono">&#10003;</div>
-          <h3>Baseline received.</h3>
-          <p class="step-sub" style="max-width:32em; margin-left:auto; margin-right:auto;">Kate's team reviews new baselines within two business days. You'll get a note with your matched template and a link to the project tracker below.</p>
+          <h3>You're in.</h3>
+          <p class="step-sub" style="max-width:32em; margin-left:auto; margin-right:auto;">Your first module and matched checklists land in your inbox within one business day, along with your member portal login. Live Q&amp;A dates and community access follow straight after.</p>
         </div>
       </div>
 
@@ -810,47 +566,48 @@
 
 <div class="cutline"></div>
 
-<section id="dashboard">
+<section id="portal">
   <div class="wrap">
     <div class="eyebrow">Once you're underway</div>
-    <h2 style="font-size:34px; max-width:15em;">Every client gets a live tracker — no chasing for updates.</h2>
+    <h2 style="font-size:32px; max-width:15em;">Every member gets a live pathway tracker and a community — no forums to hunt through.</h2>
 
     <div class="dash-shell">
       <div class="dash-header">
-        <span>PROJECT — NORTHCOTE EXTENSION · GUIDED PACKAGE</span>
+        <span>MEMBER — J. DUNN &middot; NORTHCOTE RENOVATION &middot; BUILDER TIER</span>
         <span>SHEET A&#8209;2.00</span>
       </div>
       <div class="dash-body">
-        <ul class="tracker">
-          <li>
-            <div class="tstatus done"></div>
-            <div><div class="tname">Site assessment</div><div class="tdate mono">Completed 3 Jul</div></div>
-          </li>
-          <li>
-            <div class="tstatus done"></div>
-            <div><div class="tname">Concept — template matched</div><div class="tdate mono">Completed 9 Jul</div></div>
-          </li>
-          <li>
-            <div class="tstatus current"></div>
-            <div><div class="tname">Feasibility review</div><div class="tdate mono">In progress — due 22 Jul</div></div>
-          </li>
-          <li>
-            <div class="tstatus"></div>
-            <div><div class="tname">Working plans</div><div class="tdate mono">Not started</div></div>
-          </li>
-        </ul>
-        <div class="thread">
-          <div class="msg">
-            <div class="msg-from">Kate's team</div>
-            <div class="msg-body">Your concept plan is matched to Template EX&#8209;04. Site setbacks look fine for a rear extension — flagging the shared fence line for feasibility review.</div>
+        <div>
+          <div class="panel-title">PATHWAY TRACKER</div>
+          <ul class="tracker">
+            <li><div class="tstatus done"></div><div><div class="tname">Site &amp; title checks</div><div class="tdate mono">Completed 3 Jul</div></div></li>
+            <li><div class="tstatus done"></div><div><div class="tname">Zoning, overlays &amp; planning permit</div><div class="tdate mono">Completed 11 Jul</div></div></li>
+            <li><div class="tstatus current"></div><div><div class="tname">BPC Certificate of Consent</div><div class="tdate mono">In progress — learning module 60% done</div></div></li>
+            <li><div class="tstatus"></div><div><div class="tname">Design, documentation &amp; surveyor</div><div class="tdate mono">Not started</div></div></li>
+            <li><div class="tstatus"></div><div><div class="tname">Staged construction &amp; inspections</div><div class="tdate mono">Not started</div></div></li>
+            <li><div class="tstatus"></div><div><div class="tname">Occupancy &amp; sign-off</div><div class="tdate mono">Not started</div></div></li>
+          </ul>
+        </div>
+        <div>
+          <div class="panel-title">LIVE Q&amp;A</div>
+          <div class="qa-banner" style="margin-bottom:16px;">
+            <span>Next monthly group Q&amp;A</span>
+            <strong class="mono">TUE 22 JUL &middot; 7:00PM AEST</strong>
           </div>
-          <div class="msg">
-            <div class="msg-from">You</div>
-            <div class="msg-body">Sounds good — happy to keep the footprint as drafted. When's the feasibility session?</div>
-          </div>
-          <div class="msg">
-            <div class="msg-from">Kate's team</div>
-            <div class="msg-body">Booked for Tuesday. You'll get council overlay notes beforehand so the session stays focused.</div>
+          <div class="panel-title">COMMUNITY</div>
+          <div class="thread">
+            <div class="msg">
+              <div class="msg-from">Sarah T. — Builder tier</div>
+              <div class="msg-body">Certificate of Consent came through this week — happy to answer siting questions if anyone's stuck on setbacks.</div>
+            </div>
+            <div class="msg">
+              <div class="msg-from">You</div>
+              <div class="msg-body">Did anyone deal with a shared easement along the rear boundary? Ours runs right through the extension footprint.</div>
+            </div>
+            <div class="msg">
+              <div class="msg-from">Kate's team</div>
+              <div class="msg-body">Flagging this for the next live Q&amp;A — worth booking a siting pre-check if it's tight before you lodge.</div>
+            </div>
           </div>
         </div>
       </div>
@@ -862,26 +619,23 @@
   <div class="wrap foot-grid">
     <span>DRAWN BY: K. DUNN</span>
     <span>CHECKED BY: —</span>
-    <span>REV: 01</span>
-    <span>BASELINE — DRAFTING &amp; PLANNING</span>
+    <span>REV: 02</span>
+    <span>BUILDWISE — VICTORIA OWNER-BUILDER PATHWAY</span>
   </div>
 </footer>
+<div class="legal-note">BuildWise provides general educational information about the Victorian owner-builder process. It is not site-specific professional advice, does not replace a registered building surveyor or private certifier, and does not remove the need to complete the statutory BPC process.</div>
 <div class="proto-note">This is a concept prototype for internal planning use only — no forms submit real data and nothing is stored.</div>
 
 <script>
   // ---------- Tier selection ----------
   const tierCards = document.querySelectorAll('.tier-card');
   const tierSummaryText = document.getElementById('tierSummaryText');
-  let selectedTier = 'Guided';
+  let selectedTier = 'Builder';
 
   function paintTierPickLabels(){
     tierCards.forEach(c=>{
       const pickEl = c.querySelector('.tier-pick');
-      if(c.classList.contains('selected')){
-        pickEl.textContent = 'Selected';
-      } else {
-        pickEl.textContent = 'Select ' + c.dataset.tier;
-      }
+      pickEl.textContent = c.classList.contains('selected') ? 'Selected' : ('Select ' + c.dataset.tier);
     });
   }
   tierCards.forEach(card=>{
@@ -889,35 +643,29 @@
       tierCards.forEach(c=>c.classList.remove('selected'));
       card.classList.add('selected');
       selectedTier = card.dataset.tier;
-      tierSummaryText.textContent = `${card.dataset.tier} · ${card.dataset.price} · ${card.dataset.detail}`;
+      tierSummaryText.innerHTML = `${card.dataset.tier} · ${card.dataset.price} · ${card.dataset.detail}`;
       paintTierPickLabels();
     });
   });
   paintTierPickLabels();
 
-  // ---------- Template library ----------
+  // ---------- Templates & tools ----------
   const templates = [
-    {name:'Rear Return, Single Storey', cat:'Extension', price:'from $520', icon:'ext1'},
-    {name:'Second Storey Addition', cat:'Extension', price:'from $680', icon:'ext2'},
-    {name:'Narrow Block Infill', cat:'New build', price:'from $610', icon:'new1'},
-    {name:'Corner Block Two-Storey', cat:'New build', price:'from $740', icon:'new2'},
-    {name:'Detached Studio Flat', cat:'Granny flat', price:'from $430', icon:'gf1'},
-    {name:'Garage Conversion Flat', cat:'Granny flat', price:'from $390', icon:'gf2'},
-    {name:'Open-Plan Kitchen Rework', cat:'Renovation', price:'from $360', icon:'ren1'},
-    {name:'Bathroom &amp; Laundry Reset', cat:'Renovation', price:'from $310', icon:'ren2'},
-    {name:'Wraparound Deck &amp; Alfresco', cat:'Extension', price:'from $470', icon:'ext3'},
+    {name:'Siting &amp; Setback Checklist', cat:'Site & Permits', tier:'INCLUDED FROM FOUNDATIONS', icon:'permit'},
+    {name:'BPC Certificate of Consent Checklist', cat:'Site & Permits', tier:'INCLUDED FROM FOUNDATIONS', icon:'permit'},
+    {name:'Planning Permit Lodgement Checklist', cat:'Site & Permits', tier:'INCLUDED FROM FOUNDATIONS', icon:'permit'},
+    {name:'Design Brief Worksheet', cat:'Design & Contracts', tier:'INCLUDED FROM FOUNDATIONS', icon:'contract'},
+    {name:'Scope of Works Template', cat:'Design & Contracts', tier:'INCLUDED FROM FOUNDATIONS', icon:'contract'},
+    {name:'Trade Tendering Contract Template', cat:'Design & Contracts', tier:'INCLUDED FROM BUILDER', icon:'contract'},
+    {name:'Project Milestone Schedule (VIC timeline)', cat:'Construction & Inspections', tier:'INCLUDED FROM BUILDER', icon:'construction'},
+    {name:'Inspection Readiness Checklist', cat:'Construction & Inspections', tier:'INCLUDED FROM BUILDER', icon:'construction'},
+    {name:'Occupancy Permit Sign-off Checklist', cat:'Construction & Inspections', tier:'INCLUDED FROM FOUNDATIONS', icon:'construction'},
   ];
 
   const icons = {
-    ext1:`<rect x="15" y="15" width="80" height="80" stroke="#20261F" stroke-width="2" fill="none"/><rect x="95" y="45" width="35" height="50" stroke="#B84A1C" stroke-width="2" fill="none"/><line x1="95" y1="45" x2="95" y2="95" stroke="#20261F" stroke-width="1"/>`,
-    ext2:`<rect x="20" y="20" width="90" height="70" stroke="#20261F" stroke-width="2" fill="none"/><rect x="30" y="30" width="70" height="30" stroke="#B84A1C" stroke-width="1.4" stroke-dasharray="4 3" fill="none"/><line x1="20" y1="55" x2="110" y2="55" stroke="#2B4C6F" stroke-width="1"/>`,
-    new1:`<rect x="30" y="10" width="45" height="90" stroke="#20261F" stroke-width="2" fill="none"/><line x1="30" y1="45" x2="75" y2="45" stroke="#2B4C6F" stroke-width="1"/><line x1="52" y1="45" x2="52" y2="100" stroke="#2B4C6F" stroke-width="1"/>`,
-    new2:`<rect x="15" y="15" width="100" height="80" stroke="#20261F" stroke-width="2" fill="none"/><line x1="65" y1="15" x2="65" y2="95" stroke="#20261F" stroke-width="1.4"/><line x1="15" y1="55" x2="65" y2="55" stroke="#2B4C6F" stroke-width="1"/>`,
-    gf1:`<rect x="25" y="30" width="70" height="55" stroke="#20261F" stroke-width="2" fill="none"/><path d="M25 30 L60 8 L95 30" stroke="#A9822F" stroke-width="1.6" fill="none"/>`,
-    gf2:`<rect x="20" y="35" width="60" height="50" stroke="#20261F" stroke-width="2" fill="none"/><rect x="80" y="45" width="35" height="40" stroke="#B84A1C" stroke-width="1.6" fill="none"/>`,
-    ren1:`<rect x="20" y="20" width="90" height="65" stroke="#20261F" stroke-width="2" fill="none"/><circle cx="45" cy="45" r="8" stroke="#2B4C6F" stroke-width="1.2" fill="none"/><line x1="65" y1="30" x2="95" y2="30" stroke="#2B4C6F" stroke-width="1"/>`,
-    ren2:`<rect x="30" y="25" width="60" height="55" stroke="#20261F" stroke-width="2" fill="none"/><circle cx="50" cy="45" r="6" stroke="#B84A1C" stroke-width="1.2" fill="none"/><rect x="65" y="55" width="15" height="18" stroke="#B84A1C" stroke-width="1.2" fill="none"/>`,
-    ext3:`<rect x="20" y="35" width="55" height="45" stroke="#20261F" stroke-width="2" fill="none"/><line x1="75" y1="35" x2="115" y2="35" stroke="#A9822F" stroke-width="1"/><line x1="75" y1="80" x2="115" y2="80" stroke="#A9822F" stroke-width="1"/><line x1="80" y1="35" x2="80" y2="80" stroke="#A9822F" stroke-width="1"/><line x1="95" y1="35" x2="95" y2="80" stroke="#A9822F" stroke-width="1"/><line x1="110" y1="35" x2="110" y2="80" stroke="#A9822F" stroke-width="1"/>`,
+    permit:`<rect x="30" y="10" width="60" height="80" stroke="#2B4C6F" stroke-width="2" fill="none"/><line x1="40" y1="28" x2="80" y2="28" stroke="#2B4C6F" stroke-width="1.4"/><line x1="40" y1="40" x2="80" y2="40" stroke="#2B4C6F" stroke-width="1.4"/><circle cx="60" cy="64" r="14" stroke="#2B4C6F" stroke-width="1.4" stroke-dasharray="2.5 2" fill="none"/>`,
+    contract:`<rect x="30" y="10" width="60" height="80" stroke="#A9822F" stroke-width="2" fill="none"/><line x1="40" y1="28" x2="80" y2="28" stroke="#A9822F" stroke-width="1.4"/><line x1="40" y1="40" x2="80" y2="40" stroke="#A9822F" stroke-width="1.4"/><line x1="40" y1="52" x2="70" y2="52" stroke="#A9822F" stroke-width="1.4"/><path d="M40 74 L52 66 L60 74 L80 58" stroke="#A9822F" stroke-width="1.4" fill="none"/>`,
+    construction:`<rect x="30" y="10" width="60" height="80" stroke="#B84A1C" stroke-width="2" fill="none"/><rect x="40" y="24" width="9" height="9" stroke="#B84A1C" stroke-width="1.4" fill="none"/><path d="M41 28 L44 31 L49 25" stroke="#B84A1C" stroke-width="1.2" fill="none"/><rect x="40" y="42" width="9" height="9" stroke="#B84A1C" stroke-width="1.4" fill="none"/><path d="M41 46 L44 49 L49 43" stroke="#B84A1C" stroke-width="1.2" fill="none"/><rect x="40" y="60" width="9" height="9" stroke="#B84A1C" stroke-width="1.4" fill="none"/>`,
   };
 
   const templateGrid = document.getElementById('templateGrid');
@@ -927,13 +675,13 @@
       .filter(t => filter === 'all' || t.cat === filter)
       .forEach(t=>{
         const card = document.createElement('div');
-        card.className = 'template-card';
+        card.className = 'item-card';
         card.innerHTML = `
-          <div class="template-thumb"><svg viewBox="0 0 130 100">${icons[t.icon]}</svg></div>
-          <div class="template-body">
-            <div class="template-tag mono">${t.cat}</div>
-            <div class="template-name">${t.name}</div>
-            <div class="template-price mono">${t.price}</div>
+          <div class="item-thumb"><svg viewBox="0 0 120 100">${icons[t.icon]}</svg></div>
+          <div class="item-body">
+            <div class="item-tag mono">${t.cat}</div>
+            <div class="item-name">${t.name}</div>
+            <div class="item-meta mono">${t.tier}</div>
           </div>`;
         templateGrid.appendChild(card);
       });
@@ -947,9 +695,32 @@
     renderTemplates(e.target.dataset.filter);
   });
 
+  // ---------- Add-ons ----------
+  const addons = [
+    {name:'1:1 Consulting', price:'~$220/hr', icon:'permit', desc:"Direct time with Kate for anything that doesn't fit a flat-fee session."},
+    {name:'Siting &amp; Zoning Pre-Check', price:'$350 flat fee', icon:'permit', desc:'A focused review of your site against setback, overlay and zoning rules before you lodge.'},
+    {name:'Permit Documentation Review', price:'$250 flat fee', icon:'contract', desc:"Kate checks your permit documentation for gaps before it goes to your surveyor or council."},
+    {name:'Design / Plan Review Session', price:'$300 flat fee', icon:'construction', desc:'A 60-minute session reviewing your concept or working plans before you finalise them.'},
+  ];
+  const addonGrid = document.getElementById('addonGrid');
+  addons.forEach(a=>{
+    const card = document.createElement('div');
+    card.className = 'item-card';
+    card.innerHTML = `
+      <div class="item-thumb"><svg viewBox="0 0 120 100">${icons[a.icon]}</svg></div>
+      <div class="item-body">
+        <div class="item-tag mono">BOOKABLE ADD-ON</div>
+        <div class="item-name">${a.name}</div>
+        <div class="item-meta mono">${a.price}</div>
+        <div class="item-desc">${a.desc}</div>
+        <div class="item-cta"><a href="#start" class="btn btn-ghost btn-sm">Request booking</a></div>
+      </div>`;
+    addonGrid.appendChild(card);
+  });
+
   // ---------- Multi-step intake form ----------
   let currentStep = 1;
-  const totalSteps = 4; // step 5 is the confirmation screen
+  const totalSteps = 4;
   let projectType = null;
 
   const nextBtn = document.getElementById('nextBtn');
@@ -981,7 +752,7 @@
     backBtn.disabled = currentStep === 1;
 
     if(currentStep === 4){
-      nextBtn.textContent = 'Submit baseline';
+      nextBtn.textContent = 'Confirm & start';
       fillReview();
     } else if(currentStep === 5){
       nextBtn.style.display = 'none';
@@ -1000,6 +771,7 @@
     const lot = document.getElementById('lot').value;
     document.getElementById('revSite').textContent = lot ? `${addr} · ${lot}` : addr;
     document.getElementById('revBudget').textContent = document.getElementById('budget').value;
+    document.getElementById('revSurveyor').textContent = document.getElementById('surveyor').value;
     const name = document.getElementById('name').value || 'Not provided';
     const email = document.getElementById('email').value || 'Not provided';
     document.getElementById('revContact').textContent = `${name} · ${email}`;
